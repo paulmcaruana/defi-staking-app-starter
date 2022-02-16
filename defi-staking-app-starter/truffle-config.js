@@ -12,13 +12,13 @@ module.exports = {
     },
     contracts_directory: './src/contracts/',
     contracts_build_directory: './src/truffle_abis',
-    compiler: {
+    compilers: {
         solc: {
-            version: '^0.5.0',
+            version: '0.5.5',
             optimizer: {
                 enabled: true,
                 runs: 200
             },
         }
     }
-}
+} 

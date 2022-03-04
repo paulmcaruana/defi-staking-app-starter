@@ -59,7 +59,7 @@ function depositTokens(uint _amount) public {
 // Issue rewards
 function issueTokens() public {
   // require the owner only to issue tokens
-  require(msg.sender == owner, 'caller must be the owner');
+  // require(msg.sender == owner, 'caller must be the owner');
     for(uint i=0; i<stakers.length; i++) {
      address recipient = stakers[i];
      uint balance = stakingBalance[recipient] / 9; // divide by 9 create percentage incentive

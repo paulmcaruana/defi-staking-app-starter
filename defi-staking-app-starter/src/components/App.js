@@ -91,6 +91,12 @@ class App extends Component {
         })
     }
 
+    issueTokens = () => {
+        this.setState({loading: true})
+        this.state.decentralBank.methods.issueTokens().send({from:this.state.account}).on('transactionHash',(hash) => {
+            this.setState({loading: false})
+        })
+    }
     constructor(props) {
         super(props)
         this.state = {
@@ -116,6 +122,7 @@ class App extends Component {
             stakeTokens = {this.stakeTokens}
             unstakeTokens = {this.unstakeTokens}
             decentralBankContract={this.decentralBank}
+            issueTokens={this.issueTokens} 
             />}
         return (
             <div className='App' style={{position: 'relative'}}>

@@ -22,7 +22,7 @@ constructor(RWD _rwd, Tether _tether) public {
 }
 
 function depositTokens(uint _amount) public {
-  // Require staking amount to be greater thn 0
+  // Require staking amount to be greater than 0
   require(_amount > 0, 'Amount cannot be 0');
   // Transfer tether tokens to this contract address for staking
   tether.transferFrom(msg.sender, address(this), _amount);
